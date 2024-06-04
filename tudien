@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Nhập từ :</label>
+    <input type="text" id="string">
+    <button onclick="tran()"> Dịch</button>
+    <p id="result"></p>
+    <script> 
+       function tran(){
+        let eng = [ "banana", "lemon" , " apple" , " dog" , " cat"];
+        let viet = [ " chuối ", " chanh", " táo" , " chó" , " mèo"];
+        let string = document.getElementById("string");
+        let index_eng = 0 ;
+        let result = "";
+        for ( let i = 0 ; i < eng.length ; i ++){
+            if ( string == eng){
+                index_eng = i
+                for ( let j = 0 ; j < viet.length ; j++){
+                    if( index_eng ===j){
+                        result = viet[j]
+                    }
+                }
+            }document.getElementById("result").innerHTML = result;
+        }
+       }
+
+    </script>
+</body>
+</html>
